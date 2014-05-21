@@ -10,7 +10,7 @@ Gem::Specification.new do |gem|
   gem.email         = ["barrett.clark@sabre.com"]
   gem.description   = %q{Access the Sabre Travel Platform Services (TPS) Dev Studio Flight API}
   gem.summary       = %q{Access the Sabre Dev Studio API}
-  gem.homepage      = "http://sabrelabs.com"
+  gem.homepage      = "http://developer.sabre.com"
 
   gem.files         = `git ls-files`.split($/)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
