@@ -22,19 +22,18 @@ Once you've registered for your account at http://developer.sabre.com, grab your
     irb -r ./lib/sabre_dev_studio-flight.rb
 
     SabreDevStudio.configure do |c|
-      c.user     = 'USER'
-      c.group    = 'GROUP'
-      c.domain   = 'DOMAIN'
-      c.password = 'PASSWORD'
-      c.uri      = 'https://api.test.sabre.com'
+      c.client_id     = 'V1:1234:ABCD:XYZ'
+      c.client_secret = 'SeKr1T'
+      c.uri           = 'https://api.test.sabre.com'
     end
     options = {
-      :origin        => 'LAS',
-      :departuredate => '2014-06-22',
-      :returndate    => '2014-06-23',
-      :theme         => 'MOUNTAINS'
+      :origin        => 'DFW',
+      :departuredate => '2014-08-22',
+      :returndate    => '2014-08-23',
+      :theme         => 'BEACH'
     }
     fares = SabreDevStudio::Flight::Api.destination_air_shop(options)
+    fare_info = fares.fare_info
 
 ## Contributing
 
