@@ -3,11 +3,9 @@ require File.expand_path("../test_helper", __FILE__)
 class ApiTests < Test::Unit::TestCase
   def setup
     SabreDevStudio.configure do |c|
-      c.user     = 'USER'
-      c.group    = 'GROUP'
-      c.domain   = 'DOMAIN'
-      c.password = 'PASSWORD'
-      c.uri      = 'https://api.test.sabre.com'
+      c.client_id     = 'V1:USER:GROUP:DOMAIN'
+      c.client_secret = 'PASSWORD'
+      c.uri           = 'https://api.test.sabre.com'
     end
     stub_request(:post, "https://VjE6VVNFUjpHUk9VUDpET01BSU4%3D:UEFTU1dPUkQ%3D@api.test.sabre.com/v1/auth/token").
       to_return(:status => 200, :body =>"{\"access_token\":\"Shared/IDL:IceSess\\\\/SessMgr:1\\\\.0.IDL/Common/!ICESMS\\\\/ACPCRTD!ICESMSLB\\\\/CRT.LB!-3801964284027024638!507667!0!F557CBE649675!E2E-1\",\"token_type\":\"bearer\",\"expires_in\":1800}")
