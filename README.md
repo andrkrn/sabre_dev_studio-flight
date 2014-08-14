@@ -2,6 +2,8 @@
 
 Access the Travel Platform Services Flight API
 
+[![Build Status](https://travis-ci.org/SabreDevStudio/sabre_dev_studio-flight.svg?branch=master)](https://travis-ci.org/SabreDevStudio/sabre_dev_studio-flight)
+
 ## Installation
 
 Add this line to your application's Gemfile:
