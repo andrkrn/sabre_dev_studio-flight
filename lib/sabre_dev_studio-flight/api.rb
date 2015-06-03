@@ -9,6 +9,7 @@ require File.expand_path('../multiairport_city_lookup', __FILE__)
 require File.expand_path('../theme_airport_lookup', __FILE__)
 require File.expand_path('../travel_seasonality', __FILE__)
 require File.expand_path('../travel_theme_lookup', __FILE__)
+require File.expand_path('../top_destination', __FILE__)
 
 module SabreDevStudio
   module Flight
@@ -203,6 +204,25 @@ module SabreDevStudio
       def self.airports_at_cities_lookup(options)
         endpoint = '/v1/lists/airports'
         SabreDevStudio::Flight::AirportsAtCitiesLookup.new(endpoint, options)
+      end
+
+      ##
+      # Top Destinations
+      #
+      # ==== Documentation:
+      # https://developer.sabre.com/docs/read/rest_apis/air/intelligence/top_destinations
+      #
+      # ==== Example:
+      #   options = {
+      #     origin: 'ATL',
+      #     origincountry: 'MX',
+      #     theme: 'BEACH',
+      #     topdestinations: 10
+      #   }
+      #    top_destinations = SabreDevStudio::Flight::Api.top_destination(options)
+      def self.top_destination(options)
+        endpoint = '/v1/lists/top/destinations'
+        SabreDevStudio::Flight::TopDestination.new(endpoint, options)
       end
     end
   end
