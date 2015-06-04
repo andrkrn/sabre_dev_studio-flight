@@ -9,7 +9,7 @@ require File.expand_path('../multiairport_city_lookup', __FILE__)
 require File.expand_path('../theme_airport_lookup', __FILE__)
 require File.expand_path('../travel_seasonality', __FILE__)
 require File.expand_path('../travel_theme_lookup', __FILE__)
-require File.expand_path('../top_destination', __FILE__)
+require File.expand_path('../top_destinations', __FILE__)
 
 module SabreDevStudio
   module Flight
