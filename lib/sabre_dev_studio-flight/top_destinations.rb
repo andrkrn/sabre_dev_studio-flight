@@ -6,7 +6,7 @@ module SabreDevStudio
     #
     # ==== Documentation:
     # https://developer.sabre.com/docs/read/rest_apis/air/intelligence/top_destinations
-    class TopDestination < SabreDevStudio::RequestObject
+    class TopDestinations < SabreDevStudio::RequestObject
     end
 
   end

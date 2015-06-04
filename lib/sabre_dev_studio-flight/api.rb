@@ -23,7 +23,7 @@ module SabreDevStudio
       # ==== Example:
       #    air_shopping_themes = SabreDevStudio::Flight::Api.travel_theme_lookup
       def self.travel_theme_lookup
-        endpoint = '/v1/shop/themes'
+        endpoint = '/v1/lists/supported/shop/themes/'
         SabreDevStudio::Flight::TravelThemeLookup.new(endpoint)
       end
       class << self; alias_method :air_shopping_themes, :travel_theme_lookup; end
@@ -37,7 +37,7 @@ module SabreDevStudio
       # ==== Example:
       #    airports = SabreDevStudio::Flight::Api.theme_airport_lookup('BEACH')
       def self.theme_airport_lookup(theme)
-        endpoint = "/v1/shop/themes/#{theme}"
+        endpoint = "/v1/lists/supported/shop/themes/#{theme}"
         SabreDevStudio::Flight::ThemeAirportLookup.new(endpoint)
       end
 
@@ -220,9 +220,9 @@ module SabreDevStudio
       #     topdestinations: 10
       #   }
       #    top_destinations = SabreDevStudio::Flight::Api.top_destination(options)
-      def self.top_destination(options)
+      def self.top_destinations(options)
         endpoint = '/v1/lists/top/destinations'
-        SabreDevStudio::Flight::TopDestination.new(endpoint, options)
+        SabreDevStudio::Flight::TopDestinations.new(endpoint, options)
       end
     end
   end
